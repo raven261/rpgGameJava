@@ -12,8 +12,6 @@ import java.io.*;
 
 public class HandleData {
 
-    private Character pc = new Character();
-    private Rooms rooms = new Rooms();
 
     final private static String SAVE_CHARACTER = "C:\\Users\\ravenalb\\IdeaProjects\\rpggame\\src\\main\\java\\sample\\character.json";
     final private static String SAVE_ROOMS = "C:\\Users\\ravenalb\\IdeaProjects\\rpggame\\src\\main\\java\\sample\\rooms.json";
@@ -49,6 +47,17 @@ public class HandleData {
         return null;
     }
 
+    void saveData(String type, JsonArray array){
+
+        if(type.equals("character")) {
+            saveJson(SAVE_CHARACTER, array);
+        }
+        else if(type.equals("rooms")) {
+            saveJson(SAVE_ROOMS, array);
+        }
+        System.out.println("data saved");
+    }
+
 //    JsonArray loadData(String type){
 //
 //        if(type.equals("character")){
@@ -77,11 +86,7 @@ public class HandleData {
         return null;
     }
 
-    void saveData(){
-        saveJson(SAVE_CHARACTER, pc.returnCharacterArray());
-        saveJson(SAVE_ROOMS, rooms.returnAllRoomsArray());
-        System.out.println("data saved");
-    }
+
 
     private void saveJson(String file, JsonArray array){
         try{

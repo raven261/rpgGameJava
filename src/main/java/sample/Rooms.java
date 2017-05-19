@@ -109,6 +109,10 @@ public class Rooms {
         return null;
     }
 
+    void saveRooms(){
+        data.saveData("rooms", allRooms);
+    }
+
     private JsonObject getRoom(String room){
 
         try {

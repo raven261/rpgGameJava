@@ -173,6 +173,10 @@ class Character {
         goldObject.addProperty("goldPurse", gold);
     }
 
+    void saveCharacter(){
+        data.saveData("character", character);
+    }
+
 
 //    public int getElementFromArray(int[] array, int index){
 //        return array[index];

@@ -101,6 +101,10 @@ public class Main extends Application {
         game.add(tempAction, 1,7);
 
 
+        game.add(new Label("Item info:"), 3, 0);
+        Text descText = new Text("item text");
+        descText.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
+        game.add(descText, 3,1);
 
         // Action text box
         //game.add(new Label("Action: "), 0, 5);
@@ -240,7 +244,9 @@ public class Main extends Application {
         btnSave.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent e){
-                data.saveData();
+                //data.saveData();
+                rooms.saveRooms();
+                pc.saveCharacter();
             }
         });
 

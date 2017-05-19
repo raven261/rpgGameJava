@@ -1,1 +1,72 @@
-[{"id":"x","name":"blocked space","desc":"This one is empty to have the room number equal to the indexes here"},{"id":"1","name":"Starting Location","desc":"The player starts here. There is going to be a rather long text here so the wrapping can be tested on how much text it will show in the application.","ground":[]},{"id":"2","name":"Room 2","desc":"room 2 description","ground":[]},{"id":"3","name":"Room 3","desc":"room 3 description","ground":["item2"]},{"id":"4","name":"Room 4","desc":"room 4 description","ground":["item1"]},{"id":"5","name":"Room 5","desc":"room 5 description","ground":["item1"]},{"id":"6","name":"Room 6","desc":"room 6 description","ground":["item1"]},{"id":"7","name":"Room 7","desc":"room 7 description","ground":["item1"]},{"id":"8","name":"Room 8","desc":"room 8 description","ground":["item1"]},{"id":"9","name":"Room 9","desc":"room 9 description","ground":["item1"]},{"id":"10","name":"Room 10","desc":"room 10 description","ground":["item1"]},{"id":"11","name":"Room 11","desc":"room 11 description","ground":[]},{"id":"12","name":"Room 12","desc":"room 12 description","ground":["item1"]},{"id":"13","name":"Room 13","desc":"room 13 description","ground":["item1"]}]
+[
+  { "id": "x",
+    "name" : "blocked space",
+    "desc" : "This one is empty to have the room number equal to the indexes here"
+  },
+  { "id" : "1",
+    "name" : "Starting Location",
+    "desc": "The player starts here. There is going to be a rather long text here so the wrapping can be tested on how much text it will show in the application.",
+    "ground": ["gold", "item2"]
+  },
+  { "id" : "2",
+    "name": "Room 2",
+    "desc" : "room 2 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "3",
+    "name": "Room 3",
+    "desc" : "room 3 description",
+    "ground" : ["item2"]
+  },
+  { "id" : "4",
+    "name": "Room 4",
+    "desc" : "room 4 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "5",
+    "name": "Room 5",
+    "desc" : "room 5 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "6",
+    "name": "Room 6",
+    "desc" : "room 6 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "7",
+    "name": "Room 7",
+    "desc" : "room 7 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "8",
+    "name": "Room 8",
+    "desc" : "room 8 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "9",
+    "name": "Room 9",
+    "desc" : "room 9 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "10",
+    "name": "Room 10",
+    "desc" : "room 10 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "11",
+    "name": "Room 11",
+    "desc" : "room 11 description",
+    "ground" : []
+  },
+  { "id" : "12",
+    "name": "Room 12",
+    "desc" : "room 12 description",
+    "ground" : ["item1"]
+  },
+  { "id" : "13",
+    "name": "Room 13",
+    "desc" : "room 13 description",
+    "ground" : ["item1"]
+  }
+
+]
