@@ -1,0 +1,13 @@
+[
+  { "id" : "position",
+    "locationX": 0,
+    "locationY": 0},
+  { "id": "name",
+    "name" : "Player"},
+  { "id" : "inventory",
+    "inventory": []},
+  { "id" : "coins",
+    "goldPurse" : [10]
+  }
+
+]

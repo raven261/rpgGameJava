@@ -1,0 +1,23 @@
+[
+  {
+    "id": "item1",
+    "name": "item1 name",
+    "desc": "item1 is takable and eatable.",
+     "takable": true,
+    "eatable": true
+  },
+  {
+    "id":"item2",
+    "name": "item2 name",
+    "desc": "item2 is takable but not eatable.",
+    "takable": true,
+    "eatable": false
+  },
+  {
+    "id":"item3",
+    "name": "item3 name",
+    "desc": "item3 is not takable or eatable.",
+    "takable": true,
+    "eatable": false
+  }
+]
