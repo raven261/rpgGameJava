@@ -25,6 +25,7 @@ public class Main extends Application {
     private static Rooms rooms = new Rooms();
     private static Character pc = new Character();
     private Actions actions = new Actions();
+    private static Items items = new Items();
     private static HandleData data = new HandleData();
 
     @Override
@@ -68,9 +69,9 @@ public class Main extends Application {
 
 
         // Set the page title
-        Text scenetitle = new Text("Here will be the game");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
-        game.add(scenetitle, 0, 0);
+//        Text scenetitle = new Text("Here will be the game");
+//        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
+//        game.add(scenetitle, 0, 0);
 
         // Room name
         //game.add(new Label("Location: "), 0, 1);
@@ -100,9 +101,10 @@ public class Main extends Application {
         tempAction.setText(actions.returnPlayerAction());
         game.add(tempAction, 1,7);
 
-
-        game.add(new Label("Item info:"), 3, 0);
-        Text descText = new Text("item text");
+        // Items information
+        game.add(new Label("Items info:"), 3, 0);
+        final Text descText = new Text();
+        //descText.setText(items.returnItemDescription());
         descText.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
         game.add(descText, 3,1);
 
@@ -126,6 +128,7 @@ public class Main extends Application {
                     roomDesc.setText(rooms.printRoomDescription());
                     roomItems.setText(rooms.printRoomItems());
                     tempPcLoc.setText(pc.printPlayerLocation());
+                    descText.setText(items.returnItemDescription());
                     ActionTextField.clear();
                 }
             }
@@ -156,7 +159,7 @@ public class Main extends Application {
 
 
         // Inventory screen
-        Text inventoryTitle = new Text("Inventory");
+        Text inventoryTitle = new Text("Your posessions:");
         inventoryTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
         inventory.add(inventoryTitle, 0,0);
 
@@ -168,7 +171,7 @@ public class Main extends Application {
 
         inventory.add(new Label("Items: "), 0, 2);
         final Text itemList = new Text();
-        //itemList.setText(pc.printInventory());
+        itemList.setText(pc.printInventory());
         inventory.add(itemList, 0, 3);
 
 
@@ -181,6 +184,7 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent e){
                 final Stage invStage = new Stage();
+                invStage.setTitle("Inventory");
                 //invStage.initModality(Modality.APPLICATION_MODAL);
                 //invStage.initOwner(primaryStage);
                 invStage.setScene(scene2);
@@ -209,6 +213,7 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent e){
                 final Stage helpStage = new Stage();
+                helpStage.setTitle("Help");
                 //invStage.initModality(Modality.APPLICATION_MODAL);
                 //invStage.initOwner(primaryStage);
                 helpStage.setScene(scene3);
@@ -271,6 +276,7 @@ public class Main extends Application {
     public static void main(String[] args) {
         rooms.retrieveRooms();
         rooms.printRoomsArray();
+        items.retrieveItems();
         pc.retrieveCharacter();
         pc.printCharacterArray();
 

@@ -19,5 +19,13 @@
     "desc": "item3 is not takable or eatable.",
     "takable": true,
     "eatable": false
+  },
+  {
+    "id":"gold",
+    "name": "gold",
+    "desc": "A golden coin, the coinage of the land.",
+    "takable": true,
+    "eatable": false
   }
+
 ]

@@ -53,7 +53,7 @@ public class Rooms {
     String printRoomItems(){
         String allItems = "";
         for(JsonElement i : returnRoomItems()){
-            allItems += i + ",";
+            allItems += i + ", ";
         }
         return allItems.replaceAll("\"", "");
     }
@@ -96,6 +96,8 @@ public class Rooms {
     }
 
     private JsonObject getItem(String item){
+        JsonObject nullPointer = new JsonObject();
+
         JsonArray items = data.getData("items");
         Iterator<JsonElement> iter = items.iterator();
         while (iter.hasNext()){

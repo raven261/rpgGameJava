@@ -9,6 +9,7 @@ class Actions {
     private World world = new World();
     private Rooms rooms = new Rooms();
     private Character pc = new Character();
+    private Items items = new Items();
 
     //static List<String> action = Arrays.asList(0, 0);
     private String rawAction = "start";
@@ -55,12 +56,13 @@ class Actions {
         else if(actionArray[0].equals("take")){
             String item = actionArray[1];
             rooms.takeItem(item);
-//            if(item.equals("item1")){
+//            if(items.equals("item1")){
 //
 //            }
         }
-        else if(actionArray[0].equals("inv")){
-            pc.printInventory();
+        else if(actionArray[0].equals("inspect")){
+            String item = actionArray[1];
+            items.setCurrentItem(item);
         }
         else {
             System.out.println("Unknown command");
