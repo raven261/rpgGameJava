@@ -102,6 +102,31 @@ public class Main extends Application {
         descText.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
         game.add(descText, 3,1);
 
+        // Inventory screen
+        Text inventoryTitle = new Text("Your posessions:");
+        inventoryTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
+        inventory.add(inventoryTitle, 0,0);
+
+        inventory.add(new Label("Gold: "), 0, 1);
+        final Text showGold = new Text();
+        //showGold.setText(pc.returnGoldAmount().toString());
+        inventory.add(showGold, 1, 1);
+
+        inventory.add(new Label("Items: "), 0, 2);
+        final Text itemList = new Text();
+        itemList.setText(pc.printInventory());
+        inventory.add(itemList, 0, 3);
+
+        // Help screen
+        Text helpTitle = new Text("Help");
+        helpTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
+        help.add(helpTitle, 0,0);
+
+        final Text helpText = new Text();
+        helpText.setText("HELP!!!");
+        help.add(helpText, 0, 1);
+
+
         // Action text box
         //game.add(new Label("Action: "), 0, 5);
         final TextField ActionTextField = new TextField();
@@ -123,27 +148,12 @@ public class Main extends Application {
                     roomItems.setText(rooms.printRoomItems());
                     tempPcLoc.setText(pc.printPlayerLocation());
                     descText.setText(items.returnItemDescription());
+                    itemList.setText(pc.printInventory());
+                    showGold.setText(pc.returnGoldAmount().toString());
                     ActionTextField.clear();
                 }
             }
         });
-
-        // Inventory screen
-        Text inventoryTitle = new Text("Your posessions:");
-        inventoryTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
-        inventory.add(inventoryTitle, 0,0);
-
-
-        inventory.add(new Label("Gold: "), 0, 1);
-        final Text showGold = new Text();
-        //showGold.setText(pc.returnGoldAmount().toString());
-        inventory.add(showGold, 1, 1);
-
-        inventory.add(new Label("Items: "), 0, 2);
-        final Text itemList = new Text();
-        itemList.setText(pc.printInventory());
-        inventory.add(itemList, 0, 3);
-
 
         Button btnInv = new Button("Inventory");
         HBox showInv = new HBox(5);
@@ -164,14 +174,6 @@ public class Main extends Application {
             }
         });
 
-        // Help screen
-        Text helpTitle = new Text("Help");
-        helpTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 10));
-        help.add(helpTitle, 0,0);
-
-        final Text helpText = new Text();
-        helpText.setText("HELP!!!");
-        help.add(helpText, 0, 1);
 
 
         Button btnHelp = new Button("Help");

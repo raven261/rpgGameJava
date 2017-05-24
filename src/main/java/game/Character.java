@@ -38,7 +38,7 @@ class Character {
     void updateLocationValue(int index, int value){
         location[index] = value;
         saveLocationToCharacterArray();
-        System.out.println("location updated");
+        //System.out.println("location updated");
     }
 
     Integer getPlayerLocationY(){
@@ -118,7 +118,6 @@ class Character {
                 String id = jsonOBject.get("id").getAsString();
                 if(id != null) {
                     if (id.equals(PcInfo)) {
-                        //System.out.println(info);
                         return jsonOBject;
                     }
                 }
