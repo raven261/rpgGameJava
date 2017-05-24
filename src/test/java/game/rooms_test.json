@@ -1,0 +1,11 @@
+[
+  { "id": "x",
+    "name" : "blocked space",
+    "desc" : "This one is empty to have the room number equal to the indexes here"
+  },
+  { "id" : "1",
+    "name" : "Test Room",
+    "desc": "Test room description",
+    "ground": ["test1", "test2"]
+  }
+]
